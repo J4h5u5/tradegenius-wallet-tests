@@ -1,0 +1,25 @@
+{
+  "name": "tradegenius-wallet-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "cache:metamask": "synpress ./test/wallet-setup/metamask",
+    "cache:phantom": "synpress ./test/wallet-setup/phantom --phantom",
+    "cache:phantom:smart": "./scripts/cache-phantom.sh",
+    "test:metamask": "playwright test test/e2e/metamask-connect.spec.ts",
+    "test:phantom": "playwright test test/e2e/phantom-connect.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@synthetixio/synpress": "^4.1.2",
+    "dotenv": "^17.4.2",
+    "typescript": "^6.0.2"
+  }
+}
